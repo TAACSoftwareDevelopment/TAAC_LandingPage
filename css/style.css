@@ -1059,7 +1059,7 @@ header .taac_hero {
 
 @media screen and (max-width: 450px){
   header .taac_hero { 
-    grid-template-rows: 6fr 1fr 0fr;
+    grid-template-rows: 6fr 1fr fr;
   }
   .left{
     grid-area: 1 / 1 / 3 / 4;

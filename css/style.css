@@ -1668,6 +1668,8 @@ background: #f7cd4f none repeat scroll 0 0;
   clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
 }
 
+/* Page 3: NEET|JEE */
+
 /* Add this to ensure the container wraps around all content */
 .outer-container {
   width: 100%;
@@ -1769,4 +1771,515 @@ background: #f7cd4f none repeat scroll 0 0;
 .vision_txt{
   font-size: large;
   font-weight: 500;
+}
+
+/* NEET_JEE Styling */
+/* .service-section{
+  background-image: url("../img/bg_nj.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+ /* Service Section Styling */
+.service-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f4f8; /* A neutral background color */
+  height: 100%;
+}
+
+/* Background Container */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+/* 3D Floating Shapes */
+.shape {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5; /* Opacity for better visibility */
+  animation: float 12s ease-in-out infinite;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Circle */
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ff69b4, #b42f56);
+  border-radius: 50%;
+  top: 10%;
+  right: 90%;
+  animation-delay: 0s;
+  transform: translateZ(50px);
+  -webkit-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  -o-transform: translateZ(50px);
+}
+
+.t_circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ff69b4, #b42f56);
+  border-radius: 50%;
+  top: 50%;
+  right: 60%;
+  animation-delay: 0s;
+  transform: translateZ(50px);
+}
+
+/* Small Circle */
+.circle-small {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffd700, #ffa500);
+  border-radius: 50%;
+  top: 60%;
+  left: 90%;
+  animation-delay: 3s;
+  transform: translateZ(-20px);
+}
+
+/* Small Triangle */
+.triangle-small {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid #0b325f;
+  top: 70%;
+  left: 45%;
+  animation-delay: 7s;
+  transform: translateZ(30px);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+      transform: translate(0, 0) translateZ(0);
+  }
+  50% {
+      transform: translate(20px, -30px) translateZ(20px);
+  }
+  100% {
+      transform: translate(0, 0) translateZ(0);
+  }
+}
+
+.service-section .icon-box {
+	margin-bottom: 20px;
+	padding: 30px;
+	border-radius: 6px;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.service-section .icon-box:hover .service-title a {
+	color: #0b325f;
+}
+.service-section .icon-box .service-icon {
+	float: left;
+	color: #0b325f;
+	font-size: 40px;
+}
+.service-section .icon-box .service-title {
+	margin-left: 70px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	font-size: 18px;
+	line-height: 1.2;
+}
+.service-section .icon-box .service-title a {
+	color: #b42f56;
+	transition: 0.3s;
+	text-decoration: none;
+}
+.service-section .icon-box .service-para {
+	margin-left: 70px;
+	line-height: 24px;
+	font-size: 14px;
+}
+.service-section .service-main-heading {
+	color: #0b325f;
+	padding: 0;
+	margin-bottom: 20px;
+	line-height: 1;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+/* NEET_Count Sec */
+.taac_count {
+  padding-block: min(20vh, 2rem);
+  width: calc(min(76.5rem, 90%));
+  margin-inline: auto;
+  color: #0b325f;
+}
+
+.taac_count a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.taac_count .container {
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+}
+.taac_count .card{
+  border-radius: 10px;
+  border-color: #fff;
+}
+.taac_count .card:nth-child(1) .box .icon .iconBox {
+  background: #0b325f;
+  color: #f6c915;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.taac_count .card:nth-child(2) .box .icon .iconBox {
+  background: #0b325f;
+  color: #f6c915;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.taac_count .card:nth-child(3) .box .icon .iconBox {
+  background: #0b325f;
+  color: #f6c915;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.taac_count .content {
+  padding: 0.938rem 0.625rem;
+}
+
+.taac_count .content h3 {
+  text-transform: capitalize;
+  font-size: clamp(1.5rem, 1.3909rem + 0.4364vw, 1.8rem);
+}
+
+.taac_count .card-inner {
+  position: relative;
+  width: inherit;
+  height: 18.75rem;
+  border-radius: 1.25rem;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+}
+
+.taac_count .box {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.taac_count .imgBox {
+  position: absolute;
+  inset: 0;
+}
+
+.taac_count .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.taac_count .icon {
+  position: absolute;
+  bottom: -0.375rem;
+  right: -0.375rem;
+  width: 6rem;
+  height: 6rem;
+  background: var(--clr);
+  border-top-left-radius: 50%;
+}
+
+.taac_count .icon:hover .iconBox {
+  transform: scale(1.1);
+}
+
+.taac_count .icon::before {
+  position: absolute;
+  content: "";
+  bottom: 0.375rem;
+  left: -1.25rem;
+  background: transparent;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
+}
+
+.taac_count .icon::after {
+  position: absolute;
+  content: "";
+  top: -1.25rem;
+  right: 0.375rem;
+  background: transparent;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  box-shadow: 0.313rem 0.313rem 0 0.313rem var(--clr);
+}
+
+.taac_count .iconBox {
+  position: absolute;
+  inset: 0.625rem;
+  background: #282828;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+/* TAAC_NEET_About Success */
+.about-section{
+	position:relative;
+	padding:30px 0px;
+}
+
+.about-section .content-column{
+	position:relative;
+	margin-bottom:40px;
+}
+
+.about-section .content-column .inner-column{
+	position:relative;
+	padding-top:50px;
+}
+
+.about-section .content-column .text{
+	position:relative;
+	color:#777777;
+	font-size:15px;
+	line-height:2em;
+	margin-bottom:40px;
+}
+
+.about-section .image-column{
+	position:relative;
+	margin-bottom:50px;
+}
+
+.about-section .image-column .inner-column{
+	position:relative;
+	padding:40px 40px 0px 0px;
+	margin-left:50px;
+}
+.about-section .image-column .inner-column:after{
+	position:absolute;
+	content:'';
+	right:0px;
+	top:0px;
+	left:40px;
+	bottom:100px;
+	z-index:-1;
+	border:2px solid #b42f56;
+}
+
+.about-section .image-column .inner-column .image{
+	position:relative;
+}
+
+.about-section .image-column .inner-column .image:before{
+	position:absolute;
+	content:'';
+	left:-50px;
+	bottom:-50px;
+	width:299px;
+	height:299px;
+	background:url(img/pattern-2.png) no-repeat;
+}
+
+.about-section .image-column .inner-column .image img{
+	position:relative;
+	width:100%;
+  height: auto;
+	display:block;
+}
+
+.about-section .image-column .inner-column .image .overlay-box{
+	position:absolute;
+	left:40px;
+	bottom:48px;
+}
+
+.about-section .image-column .inner-column .image .overlay-box .year-box{
+	position:relative;
+	color:#fff;
+  background-color: rgb(0, 0, 0,0.5);
+	font-size:24px;
+	font-weight:700;
+	line-height:1.4em;
+	padding-left:125px;
+  padding-right: 10px;
+  height: 110px;
+}
+
+.about-section .image-column .inner-column .image .overlay-box .year-box .number{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:110px;
+	height:110px;
+	color:#0b325f;
+	font-size:68px;
+	font-weight:700;
+	line-height:105px;
+	text-align:center;
+	background-color:#ffffff;
+	border:2px solid #b42f56;
+}
+.about-section .btn-style-three:before {
+    position: absolute;
+    content: '';
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+    right: -10px;
+    bottom: -10px;
+    background: url(https://i.ibb.co/DKn55Qz/pattern-1.jpg) repeat;
+}
+.about-section .btn-style-three:hover {
+    color: #ffffff;
+    background: #0b325f;
+}
+.about-section .btn-style-three {
+    position: relative;
+    line-height: 24px;
+    color: #252525;
+    font-size: 15px;
+    font-weight: 700;
+    background: none;
+    display: inline-block;
+    padding: 11px 40px;
+    background-color: #ffffff;
+    text-transform: capitalize;
+    border: 2px solid #b42f56;
+    font-family: 'Arimo', sans-serif;
+}
+.sec-title2{
+	color:#fff;
+}
+.sec-title {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+/* Results_Slider */
+.taacnj_slider-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.taacnj_slider-section {
+  margin-inline: auto;
+  padding-block: 1rem;
+}
+
+.taacnj_slider-section .container {
+  max-width: 75rem;
+  height: auto;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.slider-column {
+  position: relative;
+}
+.slider-image {
+  margin-inline: 0.5rem;
+}
+.slider-prev, .slider-next {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 1rem;
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.75;
+  border-radius: 50%;
+  color: #fff;
+  background:#b42f56;
+}
+.slider-prev {
+  top: 70%;
+  left: 2rem;
+  right: auto;
+}
+.slider-next {
+  top: 70%;
+  left: auto;
+  right: 2rem;
+}
+.glider-dot{
+  background: #072240;
+}
+.glider-dot.active{
+  background: #961c41;
+}
+
+.taacnj_slider-section .header-section {
+	margin-bottom: 34px;
+}
+
+.taacnj_slider-section .header-section .title {
+	position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
+	font-weight: 700;
+    font-size: 32px;
+}
+
+.taacnj_slider-section .header-section .title:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 3px;
+	background-color: #8c1f40;
+    border-radius: 3px;
+}
+
+.taacnj_slider-section .header-section .title:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+    transform: translateX(30px);
+	width: 10px;
+	height: 3px;
+	background-color: #c19d10;
+    border-radius: 3px;
+}
+
+.taacnj_slider-section .header-section .description {
+	font-size: 14px;
+    color: #282828;
 }

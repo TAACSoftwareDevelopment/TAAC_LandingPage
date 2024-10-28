@@ -35,3 +35,19 @@ window.addEventListener("click", function (e) {
 });
 
 
+//TAAC_Gallery
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('mousemove', (e) => {
+    const rect = item.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    item.style.transform = `scale(1.05) rotate3d(1, 1, 1, 10deg) translate(${x / 10}px, ${y / 10}px)`;
+  });
+
+  item.addEventListener('mouseleave', () => {
+    item.style.transform = 'scale(1) rotate(0deg) translate(0, 0)';
+  });
+});
+
+

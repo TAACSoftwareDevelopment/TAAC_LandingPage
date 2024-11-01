@@ -2805,6 +2805,11 @@ background: #f7cd4f none repeat scroll 0 0;
   padding: 4rem 2rem;
   margin: 0 auto;
 }
+.taacg_main{
+  background-image: url(../img/101941.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .taacg_main .taacg_container {
   display: grid;
@@ -2842,4 +2847,44 @@ background: #f7cd4f none repeat scroll 0 0;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
   }
+}
+
+/* TAAC Gallery Heading */
+.taacg_til{
+  text-align: center;
+  max-width: 30em;
+}
+
+.taacg_head {
+  font-family: "Oswald";
+  font-size: 2.4em;
+  line-height: 1;
+  text-transform: uppercase;
+  border-top: 4px solid #b42f56;
+  margin: 0;
+  padding: 0.375em 0 0.25em;
+}
+
+.taacg_subtitle span {
+  display: inline-block;
+  position: relative;
+  font-style: italic;
+}
+.taacg_subtitle span:before,
+.taacg_subtitle span:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  border-bottom: 1px solid #0056b3;
+  border-top: 1px solid #0056b3;
+  top: 0.75em; /* 50% of line-height */
+  width: 100%;
+}
+.taacg_subtitle span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.taacg_subtitle span:after {
+  left: 100%;
+  margin-left: 15px;
 }

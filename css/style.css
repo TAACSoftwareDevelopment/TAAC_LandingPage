@@ -3117,7 +3117,7 @@ background: #f7cd4f none repeat scroll 0 0;
     transform: translate(40%, -40%);
     width: 150px;
     height: 150px;
-    background-color: #b42f56;
+    background-color: #9c163e;
     border: 6px solid #504f93;
     border-radius: 50%;
     opacity: 0.5;
@@ -3136,12 +3136,10 @@ background: #f7cd4f none repeat scroll 0 0;
 
 .section-services .single-service .icon {
 	display: inline-block;
-	margin-bottom: 26px;
     width: 70px;
-    height: 70px;
-    background-color: #b42f56;
+    background-color: #e6edf7;
     border-radius: 5px;
-    line-height: 70px;
+    line-height: 80px;
     text-align: center;
     color: #fff;
     font-size: 30px;
@@ -3155,9 +3153,11 @@ background: #f7cd4f none repeat scroll 0 0;
 
 .section-services .single-service .title {
     margin-bottom: 18px;
-	font-weight: 700;
-    font-size: 23px;
+	font-weight: 600;
+    font-size: 20px;
     transition: color .3s;
+    color: #b92d57;
+    text-align: left;
 }
 
 .section-services .single-service:hover .title {

@@ -2888,3 +2888,316 @@ background: #f7cd4f none repeat scroll 0 0;
   left: 100%;
   margin-left: 15px;
 }
+
+/* PAGE 6: TAAC Careers */
+.banner {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+  /* box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.05),
+    0 0.3px 0.4px hsla(230, 13%, 9%, 0.02),
+    0 0.9px 1.5px hsla(230, 13%, 9%, 0.045),
+    0 3.5px 6px hsla(230, 13%, 9%, 0.09); */
+  border-radius: 0.375em;
+  transition: 0.3s;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.banner__grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__grid > * {
+  min-width: 0;
+}
+
+.banner__link {
+  position: relative;
+  text-decoration: none;
+  color: hsl(250, 84%, 54%);
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform-origin: left bottom;
+}
+
+.banner__link i {
+  /* label */
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.banner__link::after {
+  /* animated border */
+  content: "";
+  background-color: currentColor;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  -webkit-clip-path: inset(0% round 0.1875em);
+  clip-path: inset(0% round 0.1875em);
+  opacity: 0.15;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.banner__figure {
+  height: 0;
+  width: 100%;
+  padding-bottom: 50%;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner__text {
+  padding: 1.5rem;
+}
+
+.banner__link-wrapper {
+  margin-top: 1rem;
+}
+
+.banner:hover {
+  box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.05),
+    0 0.9px 1.25px hsla(230, 13%, 9%, 0.025), 0 3px 5px hsla(230, 13%, 9%, 0.05),
+    0 12px 20px hsla(230, 13%, 9%, 0.09);
+}
+
+.banner:hover .banner__link {
+  transform: scale(1.3);
+}
+
+.banner:hover .banner__link i {
+  transform: scale(0.7);
+}
+
+.banner:hover .banner__link::after {
+  height: 100%;
+}
+
+.banner:hover .banner__figure {
+  transform: scale(1.05);
+}
+
+@media (min-width: 64rem) {
+  .banner__grid {
+    flex-direction: row-reverse;
+  }
+
+  .banner__grid > * {
+    width: 50%;
+  }
+
+  .banner__figure {
+    height: 100%;
+    padding-bottom: 0;
+    -webkit-clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 50px 100%);
+    clip-path: polygon(100px 0%, 100% 0%, 100% 100%, 50px 100%);
+  }
+
+  .banner__text {
+    padding: 3rem;
+  }
+
+  .banner__link-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .banner--invert .banner__grid {
+    flex-direction: row;
+  }
+
+  .banner--invert .banner__figure {
+    -webkit-clip-path: polygon(
+      0% 0%,
+      calc(100% - 100px) 0%,
+      calc(100% - 50px) 100%,
+      0% 100%
+    );
+    clip-path: polygon(
+      0% 0%,
+      calc(100% - 100px) 0%,
+      calc(100% - 50px) 100%,
+      0% 100%
+    );
+  }
+
+  .banner--invert .banner__text {
+    text-align: right;
+  }
+
+  .banner--invert .banner__link {
+    transform-origin: right bottom;
+  }
+
+  .banner:hover .banner__figure {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+/* Career Cards */
+
+.section-services {
+	font-family: "Poppins", sans-serif;
+	background-color: #e6edf7;
+	color: #202020;
+	padding-top: 115px;
+    padding-bottom: 120px;
+}
+
+.section-services .header-section {
+	margin-bottom: 34px;
+}
+
+.section-services .header-section .title {
+	position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
+	font-weight: 700;
+    font-size: 32px;
+}
+
+.section-services .header-section .title:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 3px;
+	background-color: #b42f56;
+    border-radius: 3px;
+}
+
+.section-services .header-section .title:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+    transform: translateX(30px);
+	width: 10px;
+	height: 3px;
+	background-color: #072240;
+    border-radius: 3px;
+}
+
+.section-services .header-section .description {
+	font-size: 14px;
+    color: #282828;
+}
+
+.section-services .single-service {
+    position: relative;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    overflow: hidden;
+}
+
+.section-services .single-service .content {
+	position: relative;
+	z-index: 20;
+}
+
+.section-services .single-service .circle-before {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    transform: translate(40%, -40%);
+    width: 150px;
+    height: 150px;
+    background-color: #b42f56;
+    border: 6px solid #504f93;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 10;
+    transition: all .6s;
+}
+
+.section-services .single-service:hover .circle-before {
+	width: 100%;
+	height: 100%;
+	transform: none;
+	border: 0;
+	border-radius: 0;
+	opacity: 1;
+}
+
+.section-services .single-service .icon {
+	display: inline-block;
+	margin-bottom: 26px;
+    width: 70px;
+    height: 70px;
+    background-color: #b42f56;
+    border-radius: 5px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    transition: all .3s;
+}
+
+.section-services .single-service:hover .icon {
+	background-color: #fff;
+	color: #ff4500;
+}
+
+.section-services .single-service .title {
+    margin-bottom: 18px;
+	font-weight: 700;
+    font-size: 23px;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .title {
+	color: #fff;
+}
+
+.section-services .single-service .description {
+    margin-bottom: 20px;
+    font-size: 14px;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .description {
+	color: #fff;
+}
+
+.section-services .single-service a {
+	position: relative;
+	font-size: 18px;
+    color: #202020;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover a {
+	color: #fff;
+}
+
+.section-services .single-service a:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: #b42f56;
+	transition: background-color .3s;
+}
+
+.section-services .single-service:hover a:after {
+	background-color: #fff;
+}

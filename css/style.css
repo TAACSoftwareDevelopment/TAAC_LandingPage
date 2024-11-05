@@ -3240,9 +3240,9 @@ background: #f7cd4f none repeat scroll 0 0;
 }
 
 .taacc_modal_content::-webkit-scrollbar-thumb {
-  background-color: #062f5a;
+  background-color: rgb(0, 0, 0,0.0);
   border-radius: 10px; /* Border radius for scrollbar thumb */
-  border: 2px solid #f1f1f1;
+  /* border: 2px solid #f1f1f1; */
 }
 
 .taacc_modal_content::-webkit-scrollbar-thumb:hover {
@@ -3277,7 +3277,7 @@ background: #f7cd4f none repeat scroll 0 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #2b5685; /* Match background color */
+  border-top: 10px solid #b92d57; /* Match background color */
 }
 
 /* Responsive Font and Padding */
@@ -3319,8 +3319,8 @@ background: #f7cd4f none repeat scroll 0 0;
 .taacc_underline {
   width: 50px;
   height: 2px;
-  background-color: #333;
-  margin: 10px auto;
+  background-color: #9b2247;
+  margin: 2px auto;
 }
 
 /* Job Image Styling */

@@ -3249,6 +3249,45 @@ background: #f7cd4f none repeat scroll 0 0;
   background-color: #555;
 }
 
+/* Centered Role Highlight Styling */
+.taacc_role_highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #14457a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px; /* Rounded shape */
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px auto; /* Center align with margin */
+  width: fit-content;
+  position: relative;
+  text-align: center;
+}
+
+/* Adding a Shape Effect Using Pseudo-Element */
+.taacc_role_highlight::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #2b5685; /* Match background color */
+}
+
+/* Responsive Font and Padding */
+@media (max-width: 600px) {
+  .taacc_role_highlight {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
 /* Close Button */
 .taacc_close {
   color: #aaa;

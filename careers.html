@@ -287,9 +287,86 @@
                 </span>
                 <h3 class="title">NEET Faculty_Zoology</h3>
                 <p class="description">We are looking for an experienced NEET Zoology Faculty to join our academic team and contribute to the success of our students in cracking NEET. The ideal candidate will have a deep understanding of Zoology, proven teaching experience.</p>
-                <a href="#" class="learn-more">Learn More</a>
+                <a href="#" class="learn-more" onclick="document.getElementById('taacc_modal2').style.display='block'">Learn More</a>
               </div>
               <span class="circle-before"></span>
+            </div>
+          </div>
+          <!-- Modal 2 -->
+          <div id="taacc_modal2" class="taacc_modal">
+            <div class="taacc_modal_content">
+              <span class="taacc_close" onclick="document.getElementById('taacc_modal2').style.display='none'">&times;</span>
+              
+              <!-- Header Section -->
+              <div class="taacc_header">
+                <div class="taacc_logo_container">
+                  <img src="img/TAAC_Vector.webp" alt="Company Logo" class="taacc_logo_image">
+                  <h2 class="taacc_tagline">NEET|JEE Integrated <br> CBSE School</h2>
+                </div>
+                <div class="taacc_underline"></div>
+              </div>
+
+               <!-- Highlighted Title for Role Name -->
+               <div class="taacc_role_highlight">
+                <span id="taacc_role_name">Role: NEET Faculty_Zoology</span>
+              </div>
+              
+              <!-- Job Description -->
+              <div class="taacc_job_description">
+                <h3>Job Description</h3>
+                <p>We are seeking a dedicated and knowledgeable Zoology faculty member to join our NEET coaching team. The ideal candidate will have a strong command of Zoology, a passion for teaching, and a commitment to helping students excel in NEET exams.</p>
+                
+                <!-- Job Image -->
+                <img src="img/16286.jpg" alt="Job Image" class="taacc_job_image">
+              </div>
+          
+              <!-- Requirements -->
+              <div class="taacc_requirements">
+                <h3>Key Responsibilities</h3>
+                <ul>
+                  <li><span class="taacc_icon">&#128203;</span> Teach Zoology concepts in line with the NEET syllabus, covering all important topics effectively.</li>
+                  <li><span class="taacc_icon">&#128203;</span> Prepare students with in-depth knowledge and problem-solving strategies for NEET exams.</li>
+                  <li><span class="taacc_icon">&#128203;</span> Develop lesson plans, notes, and practice questions to reinforce understanding.</li>
+                  <li><span class="taacc_icon">&#128203;</span> Conduct regular assessments and provide feedback to track student progress.</li>
+                  <li><span class="taacc_icon">&#128203;</span> Support students with individual doubts and help them strengthen weak areas.</li>
+                  <li><span class="taacc_icon">&#128203;</span> Stay updated with NEET exam patterns and requirements to deliver relevant content.</li>
+                </ul>
+              </div>
+          
+              <!-- Qualifications -->
+              <div class="taacc_qualifications">
+                <h3>Qualifications</h3>
+                <ul>
+                  <li><span class="taacc_icon">&#127891;</span> A Master's degree or higher in Zoology or related field.</li>
+                  <li><span class="taacc_icon">&#127891;</span> Minimum of 2 years experience teaching Zoology, preferably in a NEET-focused Environment.</li>
+                  <li><span class="taacc_icon">&#127891;</span> Strong communication and interpersonal skills.</li>
+                  <li><span class="taacc_icon">&#127891;</span> Ability to inspire and motivate students toward academic success.</li>
+                </ul>
+              </div>
+
+              <!-- Why Join Us -->
+              <div class="taacc_qualifications">
+                <h3>Why Join Us</h3>
+                <ul>
+                  <li><span class="taacc_icon">&#127919;</span> Opportunity to make a significant impact on students' futures.</li>
+                  <li><span class="taacc_icon">&#127919;</span> Collaborative and supportive work environment.</li>
+                  <li><span class="taacc_icon">&#127919;</span> Competitive salary and benefits.</li>
+                </ul>
+              </div>
+          
+              <!-- Job Details -->
+              <div class="taacc_job_details">
+                <h3>Job Details</h3>
+                <p><span class="taacc_icon">&#128181;</span> <strong>Salary:</strong> INR 1,50,000-2,60,000 P/A</p>
+                <p><span class="taacc_icon">&#128188;</span> <strong>Job Type:</strong> Full-time</p>
+                <p><span class="taacc_icon">&#127970;</span> <strong>Location:</strong> Oddanchatram, TN</p>
+                <p><span class="taacc_icon">&#128197;</span> <strong>Employment Type:</strong> Permanent</p>
+              </div>
+          
+              <!-- Apply Now Button -->
+              <div class="taacc_apply_now">
+                <button>Apply Now</button>
+              </div>
             </div>
           </div>
           <!-- / End Single Service -->
@@ -340,7 +417,7 @@
   <script>
     // Close the modal when clicking outside the content
     window.onclick = function(event) {
-      const modal = document.getElementById('taacc_modal','taacc_modal1');
+      const modal = document.getElementById('taacc_modal','taacc_modal1','taacc_modal2');
       if (event.target === modal) {
         modal.style.display = 'none';
       }

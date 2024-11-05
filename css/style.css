@@ -3203,3 +3203,167 @@ background: #f7cd4f none repeat scroll 0 0;
 }
 
 /* Careers Modal */
+.taacc_modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s;
+}
+
+/* Modal Content */
+.taacc_modal_content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh; /* Set maximum height to make it scrollable */
+  overflow-y: auto; /* Enable vertical scrolling */
+  animation: slideDown 0.4s;
+  position: relative;
+}
+
+/* Scrollbar Styling */
+.taacc_modal_content::-webkit-scrollbar {
+  width: 8px; /* Reduced width */
+}
+
+.taacc_modal_content::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0,0.0);
+  border-radius: 10px; /* Border radius for scrollbar track */
+}
+
+.taacc_modal_content::-webkit-scrollbar-thumb {
+  background-color: #062f5a;
+  border-radius: 10px; /* Border radius for scrollbar thumb */
+  border: 2px solid #f1f1f1;
+}
+
+.taacc_modal_content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Close Button */
+.taacc_close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.taacc_close:hover {
+  color: #0b325f;
+}
+
+/* Header Styling */
+.taacc_header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.taacc_tagline {
+  font-size: 16px;
+  color: #0e3664;
+  font-family: 'Oswald', sans-serif;  
+  margin-top: 5px;
+}
+
+.taacc_underline {
+  width: 50px;
+  height: 2px;
+  background-color: #333;
+  margin: 10px auto;
+}
+
+/* Job Image Styling */
+.taacc_job_image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* Section Styling */
+.taacc_job_description, .taacc_requirements, .taacc_qualifications, .taacc_job_details {
+  margin-bottom: 15px;
+}
+
+.taacc_modal h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.taacc_modal p, ul {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.taacc_modal ul {
+  list-style: inside square;
+  padding-left: 10px;
+}
+
+.taacc_modal ul li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.taacc_icon {
+  margin-right: 8px;
+  color: #007bff;
+  font-size: 1.2em;
+}
+/* Flexbox Container for Logo and Tagline */
+.taacc_logo_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Logo Image Styling */
+.taacc_logo_image {
+  max-width: 100%;
+  height: auto;
+  width: 150px; /* Set a max width to make it responsive */
+}
+
+/* Apply Button Styling */
+.taacc_apply_now button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.taacc_apply_now button:hover {
+  background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

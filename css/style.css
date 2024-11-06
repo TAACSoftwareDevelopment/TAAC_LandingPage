@@ -3408,3 +3408,156 @@ background: #f7cd4f none repeat scroll 0 0;
   from { transform: translateY(-20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+/* PAGE 7_ Contact */
+/* Centered Role Highlight Styling */
+.taaccon_role_highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #831536;
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  /*Roundedshape*/font-size: 18px;
+  font-weight: bold;
+  margin: 15px auto;
+  /*Centeralignwithmargin*/width: fit-content;
+  position: relative;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* Adding a Shape Effect Using Pseudo-Element */
+.taaccon_role_highlight::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00539C; /* Match background color */
+}
+
+/* Responsive Font and Padding */
+@media (max-width: 600px) {
+  .taaccon_role_highlight {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Contact Cards */
+.contact-page-sec .contact-info {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+      margin-bottom: 10px;
+}
+.contact-page-sec .contact-info-icon {
+margin-bottom: 15px;
+}
+.contact-page-sec .contact-info-item {
+  background: #062a53;
+  padding: 30px 0px;
+}
+
+.contact-page-sec .contact-info-icon i {
+  font-size: 48px;
+  color: #fda40b;
+}
+.contact-page-sec .contact-info-text p{margin-bottom:0px;}
+.contact-page-sec .contact-info-text h2 {
+  color: #fff;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contact-page-sec .contact-info-text span {
+  color: #c2d8ef;
+  font-size: 16px;
+  font-weight:400 ;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Container Styling */
+.taaccon_title-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title Styling */
+.taaccon_title {
+  font-size: 2em;
+  background: linear-gradient(120deg, #8c1f40, #d36f8d);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: taaccon_breathe 5s infinite ease-in-out;
+  position: relative;
+  -webkit-animation: taaccon_breathe 5s infinite ease-in-out;
+}
+
+/* Shadow to make the text pop */
+.taaccon_title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  transform: translate(3px, 3px);
+}
+
+/* Breathe Animation Keyframes */
+@keyframes taaccon_breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Tagline Styling */
+.taaccon_tagline {
+  font-size: 1.0em;
+  color: #062a53;
+  margin-top: 5px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Decorative Underline Styling */
+.taaccon_underline {
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(to right, #062a53, #007bff);
+  margin: 10px auto 0;
+  border-radius: 3px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Hover Effect for Underline Expansion */
+.taaccon_title-container:hover .taaccon_underline {
+  width: 120px;
+}
+
+@media (max-width: 768px) {
+  .taaccon_title {
+      font-size: 2em;
+  }
+  .taaccon_tagline {
+      font-size: 1em;
+  }
+}
+

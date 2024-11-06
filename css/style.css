@@ -3561,3 +3561,37 @@ margin-bottom: 15px;
   }
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  width: 30px; /* Adjust width for compact look */
+  height: 30px; /* Adjust height for compact look */
+  border-radius: 50%; /* Circular button */
+}
+
+.carousel-control-prev {
+  left: 10px; /* Distance from the left edge */
+  background-color: #9b2247; /* Color for prev button */
+}
+
+.carousel-control-next {
+  right: 10px; /* Distance from the right edge */
+  background-color: #9b2247; /* Color for next button */
+}
+
+/* Optional: Center the carousel in the viewport */
+#contactCarousel .carousel {
+  display: flex;
+  justify-content: center;
+}
+
+/* Make the icons smaller and centered */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 15px; /* Adjust width for a smaller icon */
+  height: 15px; /* Adjust height for a smaller icon */
+  background-size: contain; /* Ensure the icon scales proportionally */
+  background-color: transparent; /* Remove background color */
+}
+

@@ -4295,7 +4295,7 @@ Banner */
 /* taac_digitalclassrooms */
 .taaccldc-section {
   padding: 60px 20px;
-  background-color: #f5faff;
+  background-color: #ebf0f5;
 }
 
 .taaccldc-container {
@@ -4310,7 +4310,7 @@ Banner */
 
 .taaccldc-title {
   font-size: 28px;
-  color: #1f78b4;
+  color: #073553;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -4326,19 +4326,21 @@ Banner */
 /* Cards Section */
 .taaccldc-cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 20px;
 }
 
 .taaccldc-card {
-  background: white;
+  background: rgba(127, 165, 212, 0.1);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: calc(50% - 20px);
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
+  border-style: groove;
+  border-color: rgba(178, 197, 230, 0.2);
 }
 
 .taaccldc-card:hover {
@@ -4347,20 +4349,20 @@ Banner */
 
 .taaccldc-icon {
   font-size: 40px;
-  color: #1f78b4;
+  color: #062a53;
   margin-bottom: 15px;
 }
 
 .taaccldc-card-title {
   font-size: 20px;
-  color: #333;
+  color: #9f2146;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .taaccldc-card-description {
   font-size: 15px;
-  color: #666;
+  color: #343435;
   line-height: 1.5;
 }
 

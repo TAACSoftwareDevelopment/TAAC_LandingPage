@@ -4291,3 +4291,87 @@ Banner */
   color: #555;
   line-height: 1.6;
 }
+
+/* taac_digitalclassrooms */
+.taaccldc-section {
+  padding: 60px 20px;
+  background-color: #f5faff;
+}
+
+.taaccldc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.taaccldc-header {
+  margin-bottom: 40px;
+}
+
+.taaccldc-title {
+  font-size: 28px;
+  color: #1f78b4;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.taaccldc-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Cards Section */
+.taaccldc-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.taaccldc-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 20px);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.taaccldc-card:hover {
+  transform: translateY(-5px);
+}
+
+.taaccldc-icon {
+  font-size: 40px;
+  color: #1f78b4;
+  margin-bottom: 15px;
+}
+
+.taaccldc-card-title {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.taaccldc-card-description {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .taaccldc-cards {
+      flex-direction: column;
+      gap: 15px;
+  }
+  .taaccldc-card {
+      width: 100%;
+  }
+}
+

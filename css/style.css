@@ -4051,3 +4051,243 @@ Banner */
     left: 2%;
   }
 }
+
+/* taaccl_introsec */
+.taaccl_intro-section {
+  background: #f9f9f9;
+}
+
+.taaccl_intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.taaccl_intro-image {
+  flex: 1 1 40%;
+  min-width: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.taaccl_intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.taaccl_intro-image:hover img {
+  transform: scale(1.05);
+}
+
+.taaccl_intro-text {
+  flex: 1 1 50%;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.taaccl_intro-title {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.taaccl_intro-title h2 {
+  font-size: 28px;
+  color: #8c1f40;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.taaccl_intro-title-underline {
+  width: 60px;
+  height: 4px;
+  background: #0d3d6d;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.taaccl_intro-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.taaccl_intro-highlights {
+  list-style: none;
+  padding: 0;
+}
+
+.taaccl_intro-highlights li {
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.taaccl_intro-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ff6347;
+}
+
+.taaccl_intro-highlights li:hover .taaccl_intro-icon {
+  transform: scale(1.3) rotate(20deg);
+  color: #ff4500;
+}
+
+@media (max-width: 768px) {
+  .taaccl_intro-container {
+      flex-direction: column;
+  }
+
+  .taaccl_intro-text {
+      margin-top: 20px;
+  }
+}
+
+/* taaccl_infra */
+.taacclinf-section {
+  padding: 60px 20px;
+}
+
+.taacclinf-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* Image Container */
+.taacclinf-image {
+  flex: 1 1 50%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+
+/* Image Animation */
+.taacclinf-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+/* Pulsing Animation Keyframes */
+@keyframes scaleImagePulse {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.05);
+  }
+}
+
+/* Desktop Hover Effect */
+.taacclinf-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Tablet and Mobile View (1024px and below) */
+@media (max-width: 1024px) {
+  .taacclinf-container {
+      flex-direction: column;
+  }
+
+  /* Continuous Animation on Mobile and Tablet */
+  .taacclinf-image img {
+      animation: scaleImagePulse 5s infinite alternate;
+  }
+}
+
+.taacclinf-text {
+  flex: 1 1 45%;
+  padding: 20px;
+  background: white;
+  border-right: 5px solid #0056b3;
+  position: relative;
+  border-radius: 15px;
+}
+
+.taacclinf-title {
+  font-size: 28px;
+  color: #b92d57;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.taacclinf-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.taacclinf-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.taacclinf-features li {
+  font-size: 16px;
+  color: #4CAF50;
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+
+.taacclinf-features li::before {
+  content: "🌱";
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  color: #4CAF50;
+}
+
+@media (max-width: 768px) {
+  .taacclinf-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .taacclinf-text {
+      margin-top: 20px;
+      border-left: none;
+      border-top: 5px solid #4CAF50;
+  }
+}
+.taacclinf-extra-text {
+  flex: 1 1 40%;
+  padding: 20px;
+  background: #a9d0f1;
+  border-radius: 10px;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);;
+}
+
+.taacclinf-extra-text h3 {
+  font-size: 22px;
+  color: #8c1f40;
+  margin-bottom: 10px;
+}
+
+.taacclinf-extra-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}

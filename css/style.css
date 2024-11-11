@@ -4293,87 +4293,152 @@ Banner */
 }
 
 /* taac_digitalclassrooms */
-.taaccldc-section {
-  padding: 60px 20px;
-  background-color: #ebf0f5;
+   /* Container and Basic Styling */
+   .taaccldc_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #d5e8fa;
 }
 
-.taaccldc-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+/* Heading Styling */
+.taaccldc_title {
+    font-size: 2.5em;
+    color: #88193a;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in;
+    font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+
 }
 
-.taaccldc-header {
-  margin-bottom: 40px;
+/* Description Styling */
+.taaccldc_text {
+    max-width: 800px;
+    font-size: 1.0em;
+    color: #383737;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in;
 }
 
-.taaccldc-title {
-  font-size: 28px;
-  color: #073553;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.taaccldc-description {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Cards Section */
-.taaccldc-cards {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.taaccldc-card {
-  background: rgba(127, 165, 212, 0.1);
+/* Image Container Styling */
+.taaccldc_image-container {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 20px);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  border-style: groove;
-  border-color: rgba(178, 197, 230, 0.2);
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: scaleIn 1.5s ease-in;
+  height: 400px; /* Adjust height as needed */
 }
 
-.taaccldc-card:hover {
-  transform: translateY(-5px);
+/* Wrapper for positioning the image */
+.taaccldc_image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-.taaccldc-icon {
-  font-size: 40px;
-  color: #062a53;
-  margin-bottom: 15px;
+/* Styling for Bulleted Points */
+.taaccldc_bullets {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 20px;
+  max-width: 800px;
+  margin: 20px auto 0;
+  text-align: left;
+  color: #083965;
+  font-size: 1.0em;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+  line-height: 1.8;
+  animation: fadeIn 2s ease-in;
 }
 
-.taaccldc-card-title {
-  font-size: 20px;
-  color: #9f2146;
-  font-weight: 600;
+.taaccldc_bullets li {
   margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
 }
 
-.taaccldc-card-description {
-  font-size: 15px;
-  color: #343435;
-  line-height: 1.5;
+/* Custom Bullet Styling */
+.taaccldc_bullets li:before {
+  content: "🔍"; /* Light bulb symbol for educational focus */
+  position: absolute;
+  left: 0;
+  color: #ffa500; /* Custom color for the symbol */
+  font-size: 1.2em;
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Image Styling */
+.taaccldc_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the div */
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Animation for Hover */
+.taaccldc_image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+.taaccldc_image-container:hover .taaccldc_image-overlay {
+  opacity: 1;
+}
+
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
 }
 
 /* Responsive Layout */
-@media (max-width: 768px) {
-  .taaccldc-cards {
-      flex-direction: column;
-      gap: 15px;
-  }
-  .taaccldc-card {
-      width: 100%;
-  }
-}
+@media (min-width: 768px) {
+    .taaccldc_section {
+        flex-direction: row;
+        text-align: left;
+        padding: 50px;
+    }
 
+    .taaccldc_text-container {
+        flex: 1;
+        padding-right: 20px;
+        animation: fadeIn 1.5s ease-in;
+    }
+
+    .taaccldc_image-container {
+        flex: 1;
+    }
+}

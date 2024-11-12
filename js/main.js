@@ -67,3 +67,25 @@ $('[data-fancybox="gallery"]').fancybox({
 
 
 /* Disabling Dev Tools */
+document.addEventListener('DOMContentLoaded', () => {
+  const panels = document.querySelectorAll('.taaccl_lib_panel');
+  let currentPanel = 0;
+
+  function showPanel(index) {
+    panels.forEach((panel, i) => {
+      panel.classList.remove('active');
+      if (i === index) {
+        panel.classList.add('active');
+      }
+    });
+  }
+
+  panels.forEach((panel, index) => {
+    panel.addEventListener('click', () => {
+      currentPanel = (currentPanel + 1) % panels.length;
+      showPanel(currentPanel);
+    });
+  });
+
+  showPanel(currentPanel); // Initialize the first panel as active
+});

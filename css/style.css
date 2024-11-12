@@ -4442,3 +4442,449 @@ Banner */
         flex: 1;
     }
 }
+
+/* taac_hostel facilities */
+/* Overall Section Styling */
+.taachos-hostel-section {
+  background: #f5faff;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.taachos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Introductory Section Styling */
+.taachos-intro {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.taachos-intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  animation: zoomInOut 8s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+}
+
+/* Cards Section with Horizontal Scroll */
+.taachos-cards {
+  display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+/* Card Styling */
+.taachos-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  min-width: 280px;
+  max-width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: start;
+  padding: 0;
+}
+
+.taachos-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling for Cards */
+.taachos-card-image {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 3px solid #1f78b4;
+}
+
+.taachos-card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.taachos-card:hover .taachos-card-image img {
+  transform: scale(1.1);
+}
+
+/* Card Content */
+.taachos-card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.taachos-card-content h3 {
+  font-size: 20px;
+  color: #1f78b4;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 10px;
+}
+
+.taachos-card-content p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .taachos-intro {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .taachos-card {
+      min-width: 90%;
+  }
+}
+
+/* Safety First Campus Section Styles */
+.taaccl_sfc_container {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+}
+
+.taaccl_sfc_content {
+  flex: 1 1 50%; /* Allow content to take half the container width */
+  padding: 20px;
+}
+
+.taaccl_sfc_title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.taaccl_sfc_description {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.taaccl_sfc_features {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping */
+  gap: 20px;
+}
+
+.taaccl_sfc_feature {
+  flex: 1 1 200px; /* Set a flexible width to maintain responsive wrapping */
+  text-align: center;
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.taaccl_sfc_feature:hover {
+  transform: translateY(-5px);
+}
+
+.taaccl_sfc_icon_circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: #0e4269;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.taaccl_sfc_icon_circle:hover {
+  background-color: #1e88e5;
+  transform: scale(1.1);
+}
+
+.taaccl_sfc_icon {
+  font-size: 1.8em;
+}
+
+.taaccl_sfc_feature h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.taaccl_sfc_feature p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.taaccl_sfc_image {
+  flex: 1 1 50%; /* Adjust for half width on larger screens */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.taaccl_sfc_image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.taaccl_sfc_image {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Needed for positioning the pseudo-elements */
+  padding: 20px;
+}
+
+.taaccl_sfc_image_inner {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1s ease-out; /* Slide-in animation */
+}
+
+/* Decorative corner designs for the image */
+.taaccl_sfc_image::before,
+.taaccl_sfc_image::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.taaccl_sfc_image::before {
+  top: 0;
+  left: 0;
+  border-width: 20px 20px 0 0; /* Adjust the size of the corner */
+  border-color: #b92d57 transparent transparent transparent; /* Top-left corner */
+}
+
+.taaccl_sfc_image::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 0 20px 20px; /* Adjust the size of the corner */
+  border-color: transparent transparent #8c1f40 transparent; /* Bottom-right corner */
+}
+
+/* Animation for Slide-in */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); /* Slide from the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .taaccl_sfc_container {
+    flex-direction: column;
+  }
+
+  .taaccl_sfc_content, .taaccl_sfc_image {
+    flex: 1 1 100%; /* Full-width on smaller screens */
+  }
+
+  .taaccl_sfc_features {
+    gap: 15px;
+  }
+}
+
+.taaccl_lib_container {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+  overflow: hidden;
+}
+
+.taaccl_lib_wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.taaccl_lib_wrapper:hover {
+  transform: scale(1.02);
+}
+
+.taaccl_lib_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
+}
+
+.taaccl_lib_image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.taaccl_lib_image:hover img {
+  transform: scale(1.1);
+}
+
+.taaccl_lib_content {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeInUpResponsive 1s ease-out forwards;
+  opacity: 0;
+}
+
+.taaccl_lib_heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.taaccl_lib_heading:hover {
+  color: #0066cc;
+}
+
+.taaccl_lib_description {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.taaccl_lib_description::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 50px;
+  background-color: #0066cc;
+  bottom: -10px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.taaccl_lib_description:hover::before {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+.taaccl_lib_features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.taaccl_lib_feature_item {
+  background: #e9effb;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.taaccl_lib_feature_item:hover {
+  background: #cfe0fa;
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+@keyframes fadeInUpResponsive {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .taaccl_lib_wrapper {
+      flex-direction: column;
+  }
+
+  .taaccl_lib_image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .taaccl_lib_image img {
+      width: 80%;
+      height: auto;
+      border-radius: 12px 12px 0 0;
+  }
+
+  .taaccl_lib_content {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInUpResponsive 1s ease-out forwards;
+  }
+
+  .taaccl_lib_heading {
+      font-size: 1.8em;
+  }
+
+  .taaccl_lib_description {
+      font-size: 1em;
+  }
+}

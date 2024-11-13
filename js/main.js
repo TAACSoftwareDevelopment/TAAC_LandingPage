@@ -89,3 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   showPanel(currentPanel); // Initialize the first panel as active
 });
+
+// taac_eca
+// Add the 'show' class on page load to trigger animations
+window.addEventListener('load', () => {
+  document.getElementById('taaceca-hero-section').classList.add('show');
+});

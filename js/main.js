@@ -66,7 +66,7 @@ $('[data-fancybox="gallery"]').fancybox({
 });
 
 
-/* Disabling Dev Tools */
+/* taac_library */
 document.addEventListener('DOMContentLoaded', () => {
   const panels = document.querySelectorAll('.taaccl_lib_panel');
   let currentPanel = 0;

@@ -157,25 +157,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var hero = document.querySelector('.hero');
-      var heroContent = document.querySelector('.hero-content');
-  
-      // Create an IntersectionObserver to detect when the hero section is in the viewport
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            hero.classList.add('scrolled'); // Add the class when in view
-          } else {
-            hero.classList.remove('scrolled'); // Remove the class when out of view, so it can re-trigger
-          }
-        });
-      }, { threshold: 0.5 }); // Adjust this threshold as necessary for when the effect should trigger
-  
-      // Observe the hero section
-      observer.observe(hero);
-    });
-  </script>
 
 </html>

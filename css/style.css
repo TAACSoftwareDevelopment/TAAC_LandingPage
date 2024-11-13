@@ -4729,6 +4729,7 @@ Banner */
   }
 }
 
+/* taac_library */
 .taaccl_lib_container {
   padding: 50px 20px;
   display: flex;
@@ -4744,8 +4745,6 @@ Banner */
   max-width: 1200px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background: #fff;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -4765,7 +4764,7 @@ Banner */
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 12px 0 0 12px;
+  border-radius: 12px 12px 12px 12px;
   transition: transform 0.3s ease-in-out;
 }
 

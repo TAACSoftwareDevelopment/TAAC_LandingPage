@@ -95,3 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   document.getElementById('taaceca-hero-section').classList.add('show');
 });
+
+// taaceca_activities

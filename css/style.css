@@ -5176,14 +5176,27 @@ Banner */
     .page-header {
       height: 35vh;
       min-height: 250px;
+      position: relative;
+      background-attachment: fixed; /* Enables parallax scrolling */
       background-repeat: no-repeat;
-      background-position: center center;
       background-size: cover;
+      background-position: center;
       
 }
+/* Optional: For text readability, you can add an overlay */
+    .page-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    }
     .page-header-content {
       height: inherit;
       min-height: inherit;
+      position: relative;
     }
     .page-header-list {
       transform: translate(0, -37.5px);
@@ -5192,6 +5205,11 @@ Banner */
     .swiper {
       width: 100%;
     }
+    @media (max-width: 768px) {
+      .page-header {
+          background-attachment: scroll; /* Disable parallax on smaller screens */
+      }
+  }
 
     /* General Card Styles */
 .taac_card {
@@ -5320,5 +5338,237 @@ Banner */
      flex: 1 1 100%; /* Stack bullets on smaller screens */
      text-align: center;
      justify-content: center;
+  }
+}
+
+/* PAGE 11_ TAAC CLUBS AND FORUMS */
+/* Hero Section */
+.taac_clu_hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: linear-gradient(135deg, #072240, #052e52, #105095); */
+  background-image: url('../img/CBE1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-attachment: fixed; /* Creates the parallax effect */
+    z-index: 1;
+}
+
+/* Optional overlay for better readability */
+.taac_clu_hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+  z-index: 1;
+}
+
+.taac_clu_content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.taac_clu_textbox {
+  max-width: 600px;
+  color: #fff;
+  animation: slideInFromLeft 1.5s ease-out;
+}
+
+.taac_clu_title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #a2c4ff, #ff99b8);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.taac_clu_title span {
+  display: block;
+  font-size: 3rem;
+}
+
+.taac_clu_description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.taac_clu_cta {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #831536;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.taac_clu_cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(240, 255, 141, 0.4);
+  color: #c19d10;
+}
+
+.taac_clu_imagebox {
+  position: relative;
+  animation: floatImage 3s infinite ease-in-out;
+}
+
+.taac_clu_image {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Decorative Shapes */
+.taac_clu_shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.taac_clu_circle,
+.taac_clu_square,
+.taac_clu_wave {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  mix-blend-mode: overlay;
+}
+
+.taac_clu_circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 10%;
+  left: 15%;
+  background: url('../img/circle_taac.png') no-repeat center/contain;
+  animation: bounce 6s infinite ease-in-out;
+}
+
+.taac_clu_square {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  right: 50%;
+  animation: rotate 8s infinite linear;
+  background: url('../img/cube_taac.png') no-repeat center/contain;
+}
+
+/* Keyframe Animations */
+@keyframes slideInFromLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes floatImage {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-30px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+      opacity: 0.3;
+  }
+  50% {
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 780px) {
+  .taac_clu_content {
+      flex-direction: column; /* Stack content vertically */
+      align-items: center;   /* Center content horizontally */
+      text-align: center;    /* Center text */
+      gap: 1.5rem;           /* Add spacing between elements */
+  }
+
+  .taac_clu_imagebox {
+      order: -1;             /* Place the image above the text */
+      margin-bottom: 1.5rem; /* Add spacing below the image */
+      width: 80%;            /* Adjust image width */
+  }
+
+  .taac_clu_image {
+      width: 100%;           /* Ensure the image takes full width of its container */
+      max-width: 300px;      /* Limit the image size */
+      height: auto;          /* Maintain aspect ratio */
+  }
+
+  .taac_clu_textbox {
+      max-width: 90%;        /* Limit text width for readability */
+  }
+
+  .taac_clu_title {
+      font-size: 2rem;       /* Adjust font size for titles */
+  }
+
+  .taac_clu_title span {
+      font-size: 2.2rem;     /* Adjust font size for highlighted spans */
+  }
+
+  .taac_clu_description {
+      font-size: 1rem;       /* Adjust font size for descriptions */
+  }
+
+  .taac_clu_cta {
+      font-size: 1rem;       /* Adjust font size for buttons */
+      padding: 0.6rem 1.5rem;/* Adjust button padding */
+  }
+  .taac_clu_circle{
+    top: 10%;
+  left: 2%;
+  }
+  .taac_clu_square{
+    top: 80%;
+  right: 10%;
   }
 }

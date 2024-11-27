@@ -420,65 +420,7 @@ element {
   }
 }
 
-  /* Services_Taac */
-  .taac_explore{
-    background-color: #daebf9;
-  }
-  .inner__sub {
-    --fs-h5: 1.5rem;
-    font-size: var(--fs-h5);
-    margin-bottom: 1em;
-  }
-  
-  .inner__head {
-    --fs-h3: 3rem;
-    font-size: var(--fs-h3);
-    font-family: var(--ff-head);
-    line-height: 1.4;
-    margin-bottom: 1em;
-  }
-  
-  .inner__content {
-    margin-bottom: 3em;
-  }
-  
-  .inner__text {
-    text-align: left;
-  }
-  @media (min-width: 750px) {
-    .inner {
-      padding: 1em 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      width: 100%;
-    }
-  
-    .inner__sub {
-      --fs-h5: 1.8rem;
-      font-size: var(--fs-h5);
-    }
-  
-    .inner__headings {
-      flex: 1 0 30%;
-    }
-  
-    .inner__content {
-      flex: 1 0 50%;
-      align-self: center;
-      margin-left: 2rem;
-    }
-  
-    .inner__sub {
-      margin-bottom: 0;
-    }
-  
-    .inner__head {
-      --fs-h2: 4rem;
-    }
-  }
-
-  .services{
+.services{
     padding: 20px 0;
 }
 
@@ -644,8 +586,8 @@ element {
 }
 
 .taac_feature_front img {
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   margin-bottom: 1rem;
 }
 
@@ -702,7 +644,7 @@ element {
 }
 .one h1:after {
   width: 100px;
-  height: 1px;
+  height: 3px;
   display: block;
   content: "";
   position: relative;
@@ -5696,5 +5638,146 @@ Banner */
   .taac_clu_square{
     top: 80%;
   right: 10%;
+  }
+}
+
+/* 
+taac_clu_about */
+/* Base Container Styles */
+.taac_clu_abt_container {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout for larger screens */
+  gap: 20px; /* Space between columns */
+  padding: 60px 40px; /* Adds space around the container */
+  background-color: #f7f9fc; /* Light background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Prevents content overflow */
+}
+
+/* Left Column */
+.taac_clu_abt_left {
+  flex: 0 0 40%; /* Fixed width for the left column */
+  max-width: 40%; /* Ensures consistent size */
+  min-width: 250px; /* Minimum size for readability */
+  padding-right: 20px; /* Adds space between columns */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Right Column */
+.taac_clu_abt_right {
+  flex: 1; /* Takes the remaining space */
+  max-width: 60%; /* Ensures consistent size */
+  min-width: 300px; /* Prevents shrinking too much */
+  background-color: #eef2f7; /* Light gray background */
+  border: 2px dashed #ccc; /* Placeholder for empty content */
+  height: auto; /* Allows dynamic height */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Unique Title Design */
+.taac_clu_abt_title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #003366; /* Dark blue color */
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.taac_clu_abt_title::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: #8c1f40; /* Green underline */
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* Description Styling */
+.taac_clu_abt_desc {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555; /* Medium gray */
+  line-height: 1.8; /* Improves readability */
+  text-align: justify;
+}
+
+/* Floating Bullet Points */
+.taac_clu_abt_points {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.taac_clu_abt_points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  background: rgba(11, 49, 90, 0.1); /* Light green highlight */
+  padding: 10px 15px;
+  border-radius: 8px; /* Smooth corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slight elevation */
+  transform: translateY(0);
+  animation: float 3s ease-in-out infinite; /* Floating effect */
+}
+
+.taac_clu_abt_points li:nth-child(odd) {
+  animation-delay: 0.2s; /* Delay for odd items */
+}
+
+.taac_clu_abt_points li:nth-child(even) {
+  animation-delay: 0.4s; /* Delay for even items */
+}
+
+/* Bullet Point Icons */
+.taac_clu_abt_icon {
+  width: 40px;
+  height: 40px;
+  background-color: #88193a; /* Green background */
+  color: white; /* White text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circular shape */
+  font-size: 1.2rem;
+}
+
+.taac_clu_abt_point_text {
+  font-size: 1rem;
+  color: #062c53; /* Dark gray */
+  font-weight: 500;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0); /* Default position */
+  }
+  50% {
+      transform: translateY(-10px); /* Moves up slightly */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .taac_clu_abt_container {
+      flex-direction: column; /* Stack columns vertically */
+  }
+
+  .taac_clu_abt_left,
+  .taac_clu_abt_right {
+      flex: 1 1 100%; /* Take full width */
+      max-width: 100%; /* Stretch to container width */
+  }
+
+  .taac_clu_abt_left {
+      margin-bottom: 20px; /* Adds space between stacked columns */
+      padding-right: 0; /* Remove extra padding for better alignment */
   }
 }

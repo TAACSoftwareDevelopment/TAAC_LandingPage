@@ -5800,6 +5800,7 @@ input[type=radio] {
   opacity: 0.4;
   transform: translateX(-83px);
   cursor: pointer;
+  background-color: #fbfbfb;
 }
 
 
@@ -5810,9 +5811,6 @@ input[type=radio]:nth-child(5) {
 input[type=radio]:checked {
   opacity: 1;
 }
-
-
-
 
 #taac_clu_slider label,
 #taac_clu_slider label img {
@@ -5831,8 +5829,6 @@ input[type=radio]:checked {
   justify-content: center;
   transition: transform 400ms ease;
 }
-
-
 
 /* Slider Functionality */
 
@@ -5883,7 +5879,8 @@ input[type=radio]:checked {
   #s3:checked ~ #slide2,
    #s4:checked ~ #slide3,
     #s5:checked ~ #slide4 {
-  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
   transform: translate3d(-20%, 0, -100px);
 }
 
+/* TAAC CLU Accordion */

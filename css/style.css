@@ -5973,7 +5973,7 @@ input[type=radio]:checked {
         .taacevent_caro_card {
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px #c19d10;
             background: #fff;
             max-width: 500px;
         }
@@ -5986,21 +5986,30 @@ input[type=radio]:checked {
             object-fit: cover;
         }
         .taacevent_caro_tag {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 14px;
-            border-radius: 5px;
-        }
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: rgb(0, 0, 0,0.9);
+          color: #fff;
+          padding: 8px 12px;
+          font-size: 14px;
+          font-weight: bold;
+          border-radius: 20px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+      }
+      .taacevent_caro_tag i {
+          font-size: 16px;
+      }
         .taacevent_caro_body {
             padding: 15px;
             text-align: center;
         }
         .taacevent_caro_btn {
-            background: #ff5722;
+            background: #0e1d58;
             color: white;
             border: none;
             padding: 8px 15px;
@@ -6011,7 +6020,8 @@ input[type=radio]:checked {
             transition: 0.3s;
         }
         .taacevent_caro_btn:hover {
-            background: #e64a19;
+            background: #9b2247;
+            color: #e9ca4c;
         }
         .taacevent_caro_btn i {
             margin-right: 5px;
